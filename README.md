@@ -38,7 +38,9 @@ The project workflow follows these key steps:
   SELECT * FROM dbo.table_2019
   UNION ALL
   SELECT * FROM dbo.table_2020;
-
+  
+-  Calculating revenue:
+  
   SELECT arrival_date_year, 
        hotel, 
        SUM(adr * (stays_in_week_nights + stays_in_weekend_nights)) AS revenue
@@ -58,41 +60,62 @@ The project workflow follows these key steps:
   5. Power BI Dashboard
   The Power BI dashboard addresses the following questions:
 
-  Revenue Growth:
-  Visual: Line chart showing revenue trends over years.
-  Parking Lot Decision:
-  Metric: Total required car spaces.
-  Visual: Table and line chart showing car usage percentage.
-  Trends:
-  Visuals: Sparklines for ADR, total room nights, and discount trends.
-  Dashboard Layout:
+     5.1 Revenue Growth:
+     
+  - Visual: Line chart showing revenue trends over years.
+  
+     5.2 Parking Lot Decision:
+  
+  - Metric: Total required car spaces.
+  - Visual: Table and line chart showing car usage percentage.
+  
+     5.3 Trends:
+    
+  - Visuals: Sparklines for ADR, total room nights, and discount trends.
+  
+  5.4 Dashboard Layout:
 
-  Top Section: KPIs – Total Revenue, Average ADR, Total Nights, Car Spaces.
-  Middle Section: Trends – Revenue growth, car space trends.
-  Bottom Section: Segmentation filters – Hotel type, country, and date slicers.
+  - Top Section: KPIs – Total Revenue, Average ADR, Total Nights, Car Spaces.
+  - Middle Section: Trends – Revenue growth, car space trends.
+  - Bottom Section: Segmentation filters – Hotel type, country, and date slicers.
   
   6. Insights and Recommendations
-  Revenue Growth:
-  Revenue increased significantly from 2018 to 2019 but dropped in 2020, likely due to incomplete data or external factors.
-  Parking Lot Decision:
-  Car usage remains stagnant at ~3%, indicating no immediate need for parking lot expansion.
-  Seasonal Trends:
-  ADR and booking peaks align with seasonal demands, suggesting focused marketing campaigns during peak seasons.
+
+  6.1 Revenue Growth:
+     
+  - Revenue increased significantly from 2018 to 2019 but dropped in 2020, likely due to incomplete data or external factors.
+  
+  6.2 Parking Lot Decision:
+  
+  - Car usage remains stagnant at ~3%, indicating no immediate need for parking lot expansion.
+    
+  6.3 Seasonal Trends:
+  
+  - ADR and booking peaks align with seasonal demands, suggesting focused marketing campaigns during peak seasons.
   
   7. Files in the Repository
-  data/: Folder containing the sample Excel data.
-  SQL/: Folder with .sql files for queries used in analysis.
-  powerbi_dashboard.pbix: The final Power BI dashboard file.
-  README.md: Project documentation (this file).
+  - data/: Folder containing the sample Excel data.
+  - SQL/: Folder with .sql files for queries used in analysis.
+  - powerbi_dashboard.pbix: The final Power BI dashboard file.
+  - README.md: Project documentation (this file).
   
-  9. How to Run the Project
-     9.1 Prerequisites:
-  Install SQL Server Management Studio.
-  Install Power BI Desktop.
-  Steps:
-  Import Excel files into SQL Server.
-  Execute the provided SQL scripts to clean and analyze the data.
-  Load the query results into Power BI.
-  Open the Power BI file (powerbi_dashboard.pbix) to view the dashboard.
+  8. How to Run the Project
+     
+     8.1 Prerequisites:
+  - Install SQL Server Management Studio.
+  - Install Power BI Desktop.
+  
+     8.2 Steps:
+  - Import Excel files into SQL Server.
+  - Execute the provided SQL scripts to clean and analyze the data.
+  - Load the query results into Power BI.
+  - Open the Power BI file (powerbi_dashboard.pbix) to view the dashboard.
+
+  9. Future Improvements
+  - Integrate more granular data (e.g., regional breakdown).
+  - Add predictive analytics using Power BI’s forecasting tools.
+  - Automate ETL processes with Python or Power Automate.
+
+  
 
   
